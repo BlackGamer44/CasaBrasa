@@ -1,0 +1,41 @@
+# Casa Brasa — fotos
+
+Coloca tus imágenes con estos nombres exactos. Si el archivo no existe, se muestra un placeholder.
+
+## Hero (portada a pantalla completa)
+- `img/hero/hero.jpg` — ideal 1920×1080 o más
+
+## Historia
+- `img/galeria/historia.jpg`
+
+## Menú (15 platillos)
+| Archivo | Platillo |
+|---------|----------|
+| `img/menu/01-guacamole.jpg` | Guacamole de brasa |
+| `img/menu/02-elote.jpg` | Elote carbonizado |
+| `img/menu/03-sopa.jpg` | Sopa de frijol ahumado |
+| `img/menu/04-tostadas.jpg` | Tostadas de atún |
+| `img/menu/05-arrachera.jpg` | Arrachera a la leña |
+| `img/menu/06-pollo.jpg` | Pollo al carbón |
+| `img/menu/07-costillas.jpg` | Costillas glazeadas |
+| `img/menu/08-pescado.jpg` | Pescado zarandeado |
+| `img/menu/09-camaron.jpg` | Camarones al ajillo |
+| `img/menu/10-mixto.jpg` | Parrillada Casa Brasa |
+| `img/menu/11-vegetariano.jpg` | Plato de la huerta |
+| `img/menu/12-taco.jpg` | Tacos de suadero |
+| `img/menu/13-flan.jpg` | Flan de café |
+| `img/menu/14-churros.jpg` | Churros de la casa |
+| `img/menu/15-helado.jpg` | Helado de maíz |
+
+## Galería
+- `img/galeria/01.jpg` … `img/galeria/06.jpg`
+
+## Cómo ver el sitio
+Con XAMPP: `http://localhost/proyectos/mios/restaurante/`
+
+También puedes abrir `index.html` directamente en el navegador.
+
+## Personalizar
+- Dirección y mapa: sección `#ubicacion` en `index.html` (cambia el `src` del iframe de Google Maps).
+- Teléfono / correo: busca `+52` y `hola@casabrasa.mx` en `index.html`.
+- Textos e idiomas: `js/app.js` (objeto `translations`).
