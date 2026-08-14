@@ -41,6 +41,8 @@
       "menu.starters": "Entradas",
       "menu.mains": "Principales",
       "menu.desserts": "Postres",
+      "modal.cta": "Reservar mesa",
+      "modal.close": "Cerrar",
       "dish.1.name": "Café con leche",
       "dish.1.desc": "Café suave servido con leche caliente.",
       "dish.2.name": "Café negro",
@@ -149,6 +151,8 @@
       "menu.starters": "Starters",
       "menu.mains": "Mains",
       "menu.desserts": "Desserts",
+      "modal.cta": "Book a table",
+      "modal.close": "Close",
       "dish.1.name": "Coffee with milk",
       "dish.1.desc": "Mild coffee served with hot milk.",
       "dish.2.name": "Black coffee",
@@ -361,6 +365,110 @@
         dish.classList.toggle("is-hidden", !show);
       });
     });
+  });
+
+  /* Dish modal */
+  const modal = document.getElementById("dish-modal");
+  const modalDialog = modal?.querySelector(".modal__dialog");
+  const modalImg = document.getElementById("modal-dish-img");
+  const modalName = document.getElementById("modal-dish-name");
+  const modalDesc = document.getElementById("modal-dish-desc");
+  const modalPrice = document.getElementById("modal-dish-price");
+  const modalCat = document.getElementById("modal-dish-cat");
+  const modalCloseBtn = modal?.querySelector(".modal__close");
+  let lastFocused = null;
+
+  const catKeys = {
+    bebida: "menu.drinks",
+    entrada: "menu.starters",
+    principal: "menu.mains",
+    postre: "menu.desserts",
+  };
+
+  function openDishModal(dish) {
+    if (!modal) return;
+    const img = dish.querySelector("img");
+    const name = dish.querySelector("h3");
+    const desc = dish.querySelector(".dish-body p");
+    const price = dish.querySelector(".price");
+    const cat = dish.dataset.cat;
+    const dict = translations[lang];
+
+    lastFocused = document.activeElement;
+
+    if (modalImg && img) {
+      modalImg.src = img.src;
+      modalImg.alt = img.alt || name?.textContent || "";
+    }
+    if (modalName) modalName.textContent = name?.textContent || "";
+    if (modalDesc) modalDesc.textContent = desc?.textContent || "";
+    if (modalPrice) modalPrice.textContent = price?.textContent || "";
+    if (modalCat) {
+      const key = catKeys[cat];
+      modalCat.textContent = (key && dict[key]) || cat || "";
+    }
+    if (modalCloseBtn) {
+      modalCloseBtn.setAttribute("aria-label", dict["modal.close"] || "Cerrar");
+    }
+
+    modal.hidden = false;
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    requestAnimationFrame(() => modal.classList.add("is-open"));
+    modalDialog?.focus();
+  }
+
+  function closeDishModal() {
+    if (!modal || modal.hidden) return;
+    modal.classList.remove("is-open");
+    document.body.classList.remove("modal-open");
+    modal.setAttribute("aria-hidden", "true");
+
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      modal.hidden = true;
+      if (modalImg) {
+        modalImg.removeAttribute("src");
+        modalImg.alt = "";
+      }
+      lastFocused?.focus?.();
+    };
+
+    modal.addEventListener("transitionend", finish, { once: true });
+    setTimeout(finish, 320);
+  }
+
+  dishes.forEach((dish) => {
+    dish.setAttribute("role", "button");
+    dish.setAttribute("tabindex", "0");
+    dish.setAttribute("aria-haspopup", "dialog");
+
+    dish.addEventListener("click", () => openDishModal(dish));
+    dish.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openDishModal(dish);
+      }
+    });
+  });
+
+  modal?.querySelectorAll("[data-close-modal]").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      if (el.tagName === "A" && el.getAttribute("href")?.startsWith("#")) {
+        closeDishModal();
+        return;
+      }
+      e.preventDefault();
+      closeDishModal();
+    });
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal && !modal.hidden) {
+      closeDishModal();
+    }
   });
 
   /* Contact form */
