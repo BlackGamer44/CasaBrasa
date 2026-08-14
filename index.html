@@ -1,52 +1,50 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio de Angel Javier Briseño Delgado — Desarrollador Frontend en Allende, Coahuila." />
-  <title>Angel Briseño — Portafolio</title>
+  <meta name="description" content="Casa Brasa — cocina de brasa y fuego lento" />
+  <title>Casa Brasa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <a class="skip-link" href="#inicio" data-i18n="skip">Saltar al contenido</a>
-  <div class="atmosphere" aria-hidden="true"></div>
-  <div class="frame-ornament frame-ornament-tl" aria-hidden="true"></div>
-  <div class="frame-ornament frame-ornament-tr" aria-hidden="true"></div>
-  <div class="frame-ornament frame-ornament-bl" aria-hidden="true"></div>
-  <div class="frame-ornament frame-ornament-br" aria-hidden="true"></div>
+
+  <div class="deco-rail deco-rail--left" aria-hidden="true">
+    <span>ᚠ</span><span>ᚢ</span><span>ᚦ</span><span>ᚨ</span><span>ᚱ</span><span>ᚲ</span><span>ᚷ</span><span>ᚹ</span>
+  </div>
+  <div class="deco-rail deco-rail--right" aria-hidden="true">
+    <span>ᚺ</span><span>ᚾ</span><span>ᛁ</span><span>ᛃ</span><span>ᛇ</span><span>ᛈ</span><span>ᛉ</span><span>ᛊ</span>
+  </div>
 
   <header class="site-header" id="top">
+    <div class="knot-strip" aria-hidden="true"></div>
     <div class="header-inner">
-      <a class="logo" href="#inicio" aria-label="Inicio">
-        <span class="logo-mark" aria-hidden="true"></span>
-        <span class="logo-text" data-i18n="brand">Angel Briseño</span>
-      </a>
+      <a class="logo" href="#inicio" aria-label="Casa Brasa"><span class="logo-mark" aria-hidden="true">ᚠ</span> Casa Brasa</a>
 
       <nav class="nav" id="nav" aria-label="Principal">
-        <ul class="nav-list">
-          <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
-          <li><a href="#acerca" data-i18n="nav.about">Acerca de mí</a></li>
-          <li><a href="#formacion" data-i18n="nav.education">Formación</a></li>
-          <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
-          <li><a href="#experiencia" data-i18n="nav.experience">Experiencia</a></li>
-          <li><a href="#tecnologias" data-i18n="nav.tech">Tecnologías</a></li>
-          <li><a href="#portafolio" data-i18n="nav.portfolio">Portafolio</a></li>
-          <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
-        </ul>
+        <a href="#inicio" data-i18n="nav.home">Inicio</a>
+        <a href="#historia" data-i18n="nav.history">Historia</a>
+        <a href="#mision" data-i18n="nav.mission">Misión</a>
+        <a href="#menu" data-i18n="nav.menu">Menú</a>
+        <a href="#galeria" data-i18n="nav.gallery">Galería</a>
+        <a href="#promociones" data-i18n="nav.promos">Promociones</a>
+        <a href="#ubicacion" data-i18n="nav.location">Ubicación</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
       </nav>
 
       <div class="header-actions">
         <button type="button" class="icon-btn" id="lang-toggle" aria-label="Cambiar idioma">
           <span id="lang-label">EN</span>
         </button>
-        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Cambiar tema" title="Dark Souls / Elden Ring">
-          <span class="theme-icon theme-icon-ember" aria-hidden="true"></span>
-          <span class="theme-icon theme-icon-grace" aria-hidden="true"></span>
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Cambiar tema">
+          <span class="theme-icon theme-icon--moon" aria-hidden="true"></span>
+          <span class="theme-icon theme-icon--sun" aria-hidden="true"></span>
         </button>
-        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menú">
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -54,346 +52,617 @@
   </header>
 
   <main>
+    <!-- 1. Inicio -->
     <section class="hero" id="inicio">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="hero-fog"></div>
-        <div class="hero-embers"></div>
-        <div class="hero-embers hero-embers-delay"></div>
-        <div class="hero-ray"></div>
-        <div class="hero-ring"></div>
-        <div class="hero-vignette"></div>
+      <div class="hero-media" aria-hidden="true">
+        <img src="img/hero/hero.jpg" alt="" class="hero-img" onerror="this.style.display='none'" />
+        <div class="hero-fallback"></div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-frame" aria-hidden="true">
+        <span class="corner corner--tl"></span>
+        <span class="corner corner--tr"></span>
+        <span class="corner corner--bl"></span>
+        <span class="corner corner--br"></span>
+        <span class="hero-midline hero-midline--top"></span>
+        <span class="hero-midline hero-midline--bottom"></span>
+        <span class="rune-rail rune-rail--left">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</span>
+        <span class="rune-rail rune-rail--right">ᚺ ᚾ ᛁ ᛃ ᛇ ᛈ</span>
+        <span class="hero-shield">ᛟ</span>
       </div>
       <div class="hero-content">
-        <div class="ornament ornament-top" aria-hidden="true">
-          <span class="ornament-line"></span>
-          <span class="ornament-gem"></span>
-          <span class="ornament-line"></span>
+        <p class="hero-brand"><span class="logo-mark" aria-hidden="true">ᚠ</span> Casa Brasa</p>
+        <div class="ornament ornament--light" aria-hidden="true">
+          <svg viewBox="0 0 200 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18h42M152 18h42" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M48 18h16M136 18h16" stroke="currentColor" stroke-width="1" opacity=".5" stroke-dasharray="2 3"/>
+            <path d="M70 18c10-12 20-12 30 0 10 12 20 12 30 0" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M76 18c7 9 14 9 21 0 7-9 14-9 21 0" stroke="currentColor" stroke-width="1.15" opacity=".75"/>
+            <path d="M100 6 L110 18 L100 30 L90 18 Z" stroke="currentColor" stroke-width="1.3"/>
+            <circle cx="100" cy="18" r="2.5" fill="currentColor"/>
+            <path d="M84 10l4 8-4 8M116 10l-4 8 4 8" stroke="currentColor" stroke-width="1.15"/>
+            <path d="M58 14l4 4-4 4M142 14l-4 4 4 4" stroke="currentColor" stroke-width="1" opacity=".8"/>
+          </svg>
         </div>
-        <p class="hero-brand" data-i18n="brand">Angel Briseño</p>
-        <h1 class="hero-title" data-i18n="hero.title">Interfaces con personalidad, grandeza y alma de aventura</h1>
-        <p class="hero-lead" data-i18n="hero.lead">Desarrollador Frontend. Creo experiencias web dinámicas e impactantes — lejos del minimalismo plano — inspirado por los mundos que exploro en los videojuegos.</p>
-        <div class="ornament ornament-mid" aria-hidden="true">
-          <span class="ornament-line"></span>
-          <span class="ornament-sigil"></span>
-          <span class="ornament-line"></span>
-        </div>
+        <h1 data-i18n="hero.title">Fuego lento, sabor verdadero</h1>
+        <p class="hero-lead" data-i18n="hero.lead">Cocina de brasa en el corazón de la ciudad.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#portafolio" data-i18n="hero.ctaProjects">Ver proyectos</a>
-          <a class="btn btn-ghost" href="#contacto" data-i18n="hero.ctaContact">Contactar</a>
+          <a class="btn btn--primary" href="#menu" data-i18n="hero.ctaMenu">Ver menú</a>
+          <a class="btn btn--ghost" href="#contacto" data-i18n="hero.ctaReserve">Reservar mesa</a>
         </div>
-        <a class="hero-scroll" href="#acerca" aria-label="Bajar">
-          <span data-i18n="hero.scroll">Explorar</span>
-          <span class="hero-scroll-line" aria-hidden="true"></span>
-        </a>
       </div>
+      <div class="knot-strip knot-strip--bottom" aria-hidden="true"></div>
     </section>
 
-    <section class="section about" id="acerca">
+    <!-- 2. Historia -->
+    <div class="section-divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4 L44 24 L24 44 L4 24 Z" stroke="currentColor" stroke-width="1.4"/><path d="M24 12 L36 24 L24 36 L12 24 Z" stroke="currentColor" stroke-width="1.1" opacity=".7"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+      <span></span>
+    </div>
+    <section class="section section--ornate" id="historia">
       <div class="container split">
-        <div class="about-photo">
-          <figure class="photo-frame">
-            <img src="assets/img/retrato-fondo-oscuro.png" alt="" width="480" height="600" data-i18n-alt="about.photoAlt" onerror="this.classList.add('is-missing'); this.removeAttribute('src')" />
-            <figcaption class="photo-placeholder" data-i18n="about.photoHint">Tu foto profesional aquí<br /><small>assets/img/mio.jpeg</small></figcaption>
-          </figure>
+        <div class="split-media reveal">
+          <span class="frame-corners" aria-hidden="true"></span>
+          <img src="img/galeria/historia.jpg" alt="" onerror="this.parentElement.classList.add('no-img')" />
+          <div class="media-placeholder" data-i18n="placeholder.photo">Tu foto aquí</div>
         </div>
-        <div class="about-copy">
-          <p class="eyebrow" data-i18n="about.eyebrow">Acerca de mí</p>
-          <h2 data-i18n="about.title">De jugador a creador de mundos</h2>
-          <p data-i18n="about.p1">Soy Angel Javier Briseño Delgado, tengo 23 años y nací el 21 de febrero de 2003 en Allende, Coahuila, México. Soy una persona callada y centrada en mi trabajo.</p>
-          <p data-i18n="about.p2">Me apasionan los videojuegos de exploración, aventura, acción y RPG — No Man's Sky, Fallout, GTA, Dark Souls y Elden Ring. Esas historias me impulsaron a estudiar esta carrera: quiero entender cómo se construyen las aventuras que amo y, en el futuro, crear las mías. Me centro en Frontend porque disfruto diseñar interfaces dinámicas, espectaculares y con personalidad. No me gusta el minimalismo vacío: una página web debe tener carácter y grandeza propios.</p>
-          <ul class="about-meta">
-            <li><span data-i18n="about.roleLabel">Enfoque</span><strong data-i18n="about.role">Desarrollador Frontend</strong></li>
-            <li><span data-i18n="about.locationLabel">Ubicación</span><strong data-i18n="about.location">Allende, Coahuila, México</strong></li>
-            <li><span data-i18n="about.availabilityLabel">Edad</span><strong data-i18n="about.availability">23 años · 21 feb 2003</strong></li>
-          </ul>
+        <div class="split-text reveal">
+          <p class="eyebrow" data-i18n="history.eyebrow">Nuestra historia</p>
+          <h2 data-i18n="history.title">Del fogón familiar a tu mesa</h2>
+          <div class="ornament" aria-hidden="true">
+            <svg viewBox="0 0 200 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18h42M152 18h42" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M48 18h16M136 18h16" stroke="currentColor" stroke-width="1" opacity=".5" stroke-dasharray="2 3"/>
+              <path d="M70 18c10-12 20-12 30 0 10 12 20 12 30 0" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M76 18c7 9 14 9 21 0 7-9 14-9 21 0" stroke="currentColor" stroke-width="1.15" opacity=".75"/>
+              <path d="M100 6 L110 18 L100 30 L90 18 Z" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="100" cy="18" r="2.5" fill="currentColor"/>
+              <path d="M84 10l4 8-4 8M116 10l-4 8 4 8" stroke="currentColor" stroke-width="1.15"/>
+              <path d="M58 14l4 4-4 4M142 14l-4 4 4 4" stroke="currentColor" stroke-width="1" opacity=".8"/>
+            </svg>
+          </div>
+          <p data-i18n="history.p1">Casa Brasa nació en 2012 en la cocina de una casa familiar, donde el carbón y la paciencia definían cada platillo. Lo que empezó como reuniones de domingo se convirtió en un restaurante que celebra el fuego vivo.</p>
+          <p data-i18n="history.p2">Hoy seguimos asando a la leña, moliendo especias a mano y recibiendo a cada visita como si fuera de la familia. Cada temporada renovamos el menú, pero el alma del fogón no cambia.</p>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt" id="formacion">
+    <!-- 3. Misión y visión -->
+    <div class="section-divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4 L44 24 L24 44 L4 24 Z" stroke="currentColor" stroke-width="1.4"/><path d="M24 12 L36 24 L24 36 L12 24 Z" stroke="currentColor" stroke-width="1.1" opacity=".7"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+      <span></span>
+    </div>
+    <section class="section section--alt section--ornate" id="mision">
       <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="edu.eyebrow">Formación académica</p>
-          <h2 data-i18n="edu.title">Trayectoria de estudio</h2>
-          <div class="ornament ornament-sm" aria-hidden="true">
-            <span class="ornament-line"></span>
-            <span class="ornament-gem"></span>
-            <span class="ornament-line"></span>
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="mission.eyebrow">Quiénes somos</p>
+          <h2 data-i18n="mission.title">Misión y visión</h2>
+          <div class="ornament" aria-hidden="true">
+            <svg viewBox="0 0 200 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18h42M152 18h42" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M48 18h16M136 18h16" stroke="currentColor" stroke-width="1" opacity=".5" stroke-dasharray="2 3"/>
+              <path d="M70 18c10-12 20-12 30 0 10 12 20 12 30 0" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M76 18c7 9 14 9 21 0 7-9 14-9 21 0" stroke="currentColor" stroke-width="1.15" opacity=".75"/>
+              <path d="M100 6 L110 18 L100 30 L90 18 Z" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="100" cy="18" r="2.5" fill="currentColor"/>
+              <path d="M84 10l4 8-4 8M116 10l-4 8 4 8" stroke="currentColor" stroke-width="1.15"/>
+              <path d="M58 14l4 4-4 4M142 14l-4 4 4 4" stroke="currentColor" stroke-width="1" opacity=".8"/>
+            </svg>
           </div>
-          <p class="section-lead" data-i18n="edu.lead">Desde ofimática hasta ingeniería en software — siempre construyendo el camino.</p>
-        </header>
-        <ol class="timeline">
-          <li class="timeline-item">
-            <time datetime="2025">2025 — <span data-i18n="exp.present">Actualidad</span></time>
-            <h3 data-i18n="edu.item1.title">Ingeniería en Desarrollo y Gestión de Software</h3>
-            <p data-i18n="edu.item1.place">Universidad Tecnológica del Norte de Coahuila</p>
-            <p data-i18n="edu.item1.desc">Continuación de mi formación profesional, profundizando en desarrollo y gestión de software.</p>
-          </li>
-          <li class="timeline-item">
-            <time datetime="2021">2021 — 2025</time>
-            <h3 data-i18n="edu.item2.title">TSU en Tecnologías de la Información — Desarrollo de Software Multiplataforma</h3>
-            <p data-i18n="edu.item2.place">Universidad Tecnológica del Norte de Coahuila</p>
-            <p data-i18n="edu.item2.desc">Técnico Universitario Superior. Incluye un año sabático dentro del periodo.</p>
-          </li>
-          <li class="timeline-item">
-            <time datetime="2018">2018 — 2021</time>
-            <h3 data-i18n="edu.item3.title">Preparatoria — Técnico Mecatrónico</h3>
-            <p data-i18n="edu.item3.place">CECyTEC Allende José Sertuche Reyes</p>
-            <p data-i18n="edu.item3.desc">Bachillerato técnico con especialidad en mecatrónica.</p>
-          </li>
-          <li class="timeline-item">
-            <time datetime="2015">2015 — 2018</time>
-            <h3 data-i18n="edu.item4.title">Secundaria — Ofimática</h3>
-            <p data-i18n="edu.item4.place">Secundaria Técnica 10 Eduardo I. Montemayor</p>
-            <p data-i18n="edu.item4.desc">Formación secundaria con especialidad en ofimática.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section" id="habilidades">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="skills.eyebrow">Habilidades técnicas</p>
-          <h2 data-i18n="skills.title">Lo que aporto al equipo</h2>
-          <div class="ornament ornament-sm" aria-hidden="true">
-            <span class="ornament-line"></span>
-            <span class="ornament-gem"></span>
-            <span class="ornament-line"></span>
-          </div>
-          <p class="section-lead" data-i18n="skills.lead">Frontend con carácter: interfaces que se sienten como un mundo propio.</p>
-        </header>
-        <ul class="skills-grid">
-          <li>
-            <h3 data-i18n="skills.s1.title">Frontend</h3>
-            <p data-i18n="skills.s1.desc">Interfaces dinámicas, espectaculares y con personalidad. Diseño que busca impacto, no solo utilidad.</p>
-          </li>
-          <li>
-            <h3 data-i18n="skills.s2.title">Diseño con grandeza</h3>
-            <p data-i18n="skills.s2.desc">Rechazo el minimalismo plano. Cada sitio debe tener identidad, atmósfera y presencia propias.</p>
-          </li>
-          <li>
-            <h3 data-i18n="skills.s3.title">Enfoque y disciplina</h3>
-            <p data-i18n="skills.s3.desc">Trabajo callado, concentrado y constante: me sumerjo en el detalle hasta que la interfaz cobra vida.</p>
-          </li>
-          <li>
-            <h3 data-i18n="skills.s4.title">Inspiración gamer</h3>
-            <p data-i18n="skills.s4.desc">Exploración, aventura, acción y RPG alimentan mi visión creativa y mi forma de construir experiencias.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="experiencia">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="exp.eyebrow">Experiencia</p>
-          <h2 data-i18n="exp.title">Proyectos y roles</h2>
-          <p class="section-lead" data-i18n="exp.lead">Proyectos reales donde he construido, probado y dado forma a la interfaz.</p>
-        </header>
-        <div class="exp-list">
-          <article class="exp-item">
-            <div class="exp-meta">
-              <span data-i18n="exp.item1.type">Fullstack · Tester</span>
-            </div>
-            <h3 data-i18n="exp.item1.title">Sistema de notarías</h3>
-            <p data-i18n="exp.item1.desc">Desarrollador fullstack y tester: participación en frontend, backend y pruebas del sistema.</p>
+        </div>
+        <div class="mv-grid">
+          <article class="mv-block reveal">
+            <h3 data-i18n="mission.missionTitle">Misión</h3>
+            <p data-i18n="mission.missionText">Ofrecer cocina de brasa auténtica, con ingredientes locales y un servicio cálido, para que cada comida sea un momento memorable alrededor del fuego.</p>
           </article>
-          <article class="exp-item">
-            <div class="exp-meta">
-              <span data-i18n="exp.item2.type">Frontend</span>
-            </div>
-            <h3 data-i18n="exp.item2.title">Sistema de tareas</h3>
-            <p data-i18n="exp.item2.desc">Desarrollador frontend: interfaces para gestionar y visualizar tareas de forma clara y usable.</p>
-          </article>
-          <article class="exp-item">
-            <div class="exp-meta">
-              <span data-i18n="exp.item3.type">Personal · Web</span>
-            </div>
-            <h3 data-i18n="exp.item3.title">Página Sin Motivo</h3>
-            <p data-i18n="exp.item3.desc">Página personal desarrollada de punta a punta, con carácter propio y libertad creativa.</p>
+          <article class="mv-block reveal">
+            <h3 data-i18n="mission.visionTitle">Visión</h3>
+            <p data-i18n="mission.visionText">Ser el referente de la cocina a la brasa en la región: un lugar donde tradición, calidad y hospitalidad se encuentran en cada visita.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="tecnologias">
+    <!-- 4. Menú (15 platillos) -->
+    <div class="section-divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4 L44 24 L24 44 L4 24 Z" stroke="currentColor" stroke-width="1.4"/><path d="M24 12 L36 24 L24 36 L12 24 Z" stroke="currentColor" stroke-width="1.1" opacity=".7"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+      <span></span>
+    </div>
+    <section class="section section--ornate" id="menu">
       <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="tech.eyebrow">Tecnologías</p>
-          <h2 data-i18n="tech.title">Stack que domino</h2>
-          <p class="section-lead" data-i18n="tech.lead">Herramientas con las que doy forma a interfaces con carácter.</p>
-        </header>
-        <ul class="tech-list" role="list">
-          <li data-pct="95%"><span>HTML5</span><div class="bar" style="--level:95%"></div></li>
-          <li data-pct="92%"><span>CSS3 / Responsive</span><div class="bar" style="--level:92%"></div></li>
-          <li data-pct="88%"><span>JavaScript</span><div class="bar" style="--level:88%"></div></li>
-          <li data-pct="75%"><span>PHP</span><div class="bar" style="--level:75%"></div></li>
-          <li data-pct="70%"><span>MySQL</span><div class="bar" style="--level:70%"></div></li>
-          <li data-pct="85%"><span>Git / GitHub</span><div class="bar" style="--level:85%"></div></li>
-          <li data-pct="65%"><span>React</span><div class="bar" style="--level:65%"></div></li>
-          <li data-pct="60%"><span>Node.js</span><div class="bar" style="--level:60%"></div></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="portafolio">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="port.eyebrow">Portafolio</p>
-          <h2 data-i18n="port.title">Proyectos seleccionados</h2>
-          <div class="ornament ornament-sm" aria-hidden="true">
-            <span class="ornament-line"></span>
-            <span class="ornament-gem"></span>
-            <span class="ornament-line"></span>
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="menu.eyebrow">Carta</p>
+          <h2 data-i18n="menu.title">Menú de productos</h2>
+          <div class="ornament" aria-hidden="true">
+            <svg viewBox="0 0 200 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18h42M152 18h42" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M48 18h16M136 18h16" stroke="currentColor" stroke-width="1" opacity=".5" stroke-dasharray="2 3"/>
+              <path d="M70 18c10-12 20-12 30 0 10 12 20 12 30 0" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M76 18c7 9 14 9 21 0 7-9 14-9 21 0" stroke="currentColor" stroke-width="1.15" opacity=".75"/>
+              <path d="M100 6 L110 18 L100 30 L90 18 Z" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="100" cy="18" r="2.5" fill="currentColor"/>
+              <path d="M84 10l4 8-4 8M116 10l-4 8 4 8" stroke="currentColor" stroke-width="1.15"/>
+              <path d="M58 14l4 4-4 4M142 14l-4 4 4 4" stroke="currentColor" stroke-width="1" opacity=".8"/>
+            </svg>
           </div>
-          <p class="section-lead" data-i18n="port.lead">Tres aventuras construidas: sistemas reales y una página con personalidad propia.</p>
-        </header>
-        <div class="port-filters" role="group" aria-label="Filtros">
-          <button type="button" class="filter-btn is-active" data-filter="all" data-i18n="port.filterAll">Todos</button>
-          <button type="button" class="filter-btn" data-filter="app" data-i18n="port.filterApp">Sistemas</button>
-          <button type="button" class="filter-btn" data-filter="web" data-i18n="port.filterWeb">Web</button>
+          <p class="section-lead" data-i18n="menu.lead">Quince platillos pensados para compartir alrededor de la brasa.</p>
         </div>
-        <ul class="port-grid">
-          <li class="port-item" data-category="app">
-            <a href="#" class="port-link">
-              <div class="port-visual port-visual-1">
-                <img src="assets/img/notarias.png" alt="" data-i18n-alt="port.p1.title" width="640" height="400" loading="lazy" />
+
+        <div class="menu-filters reveal" role="tablist" aria-label="Categorías">
+          <button type="button" class="chip is-active" data-filter="all" data-i18n="menu.all">Todos</button>
+          <button type="button" class="chip" data-filter="bebida" data-i18n="menu.drinks">Bebidas</button>
+          <button type="button" class="chip" data-filter="entrada" data-i18n="menu.starters">Entradas</button>
+          <button type="button" class="chip" data-filter="principal" data-i18n="menu.mains">Principales</button>
+          <button type="button" class="chip" data-filter="postre" data-i18n="menu.desserts">Postres</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+          <!-- 1 -->
+          <article class="dish" data-cat="bebida">
+            <div class="dish-media">
+              <img src="img/menu/cafe_leche.png" alt="Café con leche" />
+              <span class="dish-ph">01</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.1.name">Café con leche</h3>
+                <span class="price">$20</span>
               </div>
-              <div class="port-info">
-                <h3 data-i18n="port.p1.title">Sistema de notarías</h3>
-                <p data-i18n="port.p1.desc">Sistema para gestión notarial. Rol: desarrollador fullstack y tester.</p>
-                <span class="port-tags" data-i18n="port.p1.tags">Fullstack · Testing</span>
+              <p data-i18n="dish.1.desc">Café suave servido con leche caliente.</p>
+            </div>
+          </article>
+          <!-- 2 -->
+          <article class="dish" data-cat="bebida">
+            <div class="dish-media">
+              <img src="img/menu/cafe_negro.png" alt="Café negro" />
+              <span class="dish-ph">02</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.2.name">Café negro</h3>
+                <span class="price">$20</span>
               </div>
-            </a>
-          </li>
-          <li class="port-item" data-category="app">
-            <a href="#" class="port-link">
-              <div class="port-visual port-visual-2">
-                <img src="assets/img/tareas.png" alt="" data-i18n-alt="port.p2.title" width="640" height="400" loading="lazy" />
+              <p data-i18n="dish.2.desc">Café negro puro, recién preparado.</p>
+            </div>
+          </article>
+          <!-- 3 -->
+          <article class="dish" data-cat="bebida">
+            <div class="dish-media">
+              <img src="img/menu/limonada.png" alt="Limonada" />
+              <span class="dish-ph">03</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.3.name">Limonada</h3>
+                <span class="price">$15</span>
               </div>
-              <div class="port-info">
-                <h3 data-i18n="port.p2.title">Sistema de tareas</h3>
-                <p data-i18n="port.p2.desc">Aplicación para organizar y dar seguimiento a tareas. Rol: desarrollador frontend.</p>
-                <span class="port-tags" data-i18n="port.p2.tags">Frontend · UI</span>
+              <p data-i18n="dish.3.desc">Limonada natural, fresca y refrescante.</p>
+            </div>
+          </article>
+          <!-- 4 -->
+          <article class="dish" data-cat="entrada">
+            <div class="dish-media">
+              <img src="img/menu/quesadillas.png" alt="Quesadillas" />
+              <span class="dish-ph">04</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.4.name">Quesadillas</h3>
+                <span class="price">$45</span>
               </div>
-            </a>
-          </li>
-          <li class="port-item" data-category="web">
-            <a href="#" class="port-link">
-              <div class="port-visual port-visual-3">
-                <img src="assets/img/sin_motivo.png" alt="" data-i18n-alt="port.p3.title" width="640" height="400" loading="lazy" />
+              <p data-i18n="dish.4.desc">Tortillas de maíz con queso derretido y salsa al gusto.</p>
+            </div>
+          </article>
+          <!-- 5 -->
+          <article class="dish" data-cat="entrada">
+            <div class="dish-media">
+              <img src="img/menu/tamales.png" alt="Tamales" />
+              <span class="dish-ph">05</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.5.name">Tamales</h3>
+                <span class="price">$30</span>
               </div>
-              <div class="port-info">
-                <h3 data-i18n="port.p3.title">Página Sin Motivo</h3>
-                <p data-i18n="port.p3.desc">Página personal con libertad creativa y carácter propio. Rol: desarrollador.</p>
-                <span class="port-tags" data-i18n="port.p3.tags">Web · Personal</span>
+              <p data-i18n="dish.5.desc">Tamales tradicionales envueltos en hoja de maíz.</p>
+            </div>
+          </article>
+          <!-- 6 -->
+          <article class="dish" data-cat="entrada">
+            <div class="dish-media">
+              <img src="img/menu/tostadas_con_huevo.png" alt="Tostadas con huevo" />
+              <span class="dish-ph">06</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.6.name">Tostadas con huevo</h3>
+                <span class="price">$55</span>
               </div>
-            </a>
-          </li>
-        </ul>
+              <p data-i18n="dish.6.desc">Tostadas crujientes servidas con huevo y salsa.</p>
+            </div>
+          </article>
+          <!-- 7 -->
+          <article class="dish" data-cat="entrada">
+            <div class="dish-media">
+              <img src="img/menu/huevos_chile.png" alt="Huevos con chile" />
+              <span class="dish-ph">07</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.7.name">Huevos con chile</h3>
+                <span class="price">$60</span>
+              </div>
+              <p data-i18n="dish.7.desc">Huevos revueltos con chile y acompañamientos de la casa.</p>
+            </div>
+          </article>
+          <!-- 8 -->
+          <article class="dish" data-cat="principal">
+            <div class="dish-media">
+              <img src="img/menu/chilaquiles_rojos.png" alt="Chilaquiles rojos" />
+              <span class="dish-ph">08</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.8.name">Chilaquiles rojos</h3>
+                <span class="price">$75</span>
+              </div>
+              <p data-i18n="dish.8.desc">Totopos bañados en salsa roja, crema y queso.</p>
+            </div>
+          </article>
+          <!-- 9 -->
+          <article class="dish" data-cat="principal">
+            <div class="dish-media">
+              <img src="img/menu/enchiladas_verdes.png" alt="Enchiladas verdes" />
+              <span class="dish-ph">09</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.9.name">Enchiladas verdes</h3>
+                <span class="price">$85</span>
+              </div>
+              <p data-i18n="dish.9.desc">Enchiladas en salsa verde con crema, queso y cebolla.</p>
+            </div>
+          </article>
+          <!-- 10 -->
+          <article class="dish" data-cat="principal">
+            <div class="dish-media">
+              <img src="img/menu/tacos_pastor.png" alt="Tacos al pastor" />
+              <span class="dish-ph">10</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.10.name">Tacos al pastor</h3>
+                <span class="price">$70</span>
+              </div>
+              <p data-i18n="dish.10.desc">Tacos de pastor con piña, cilantro y cebolla.</p>
+            </div>
+          </article>
+          <!-- 11 -->
+          <article class="dish" data-cat="principal">
+            <div class="dish-media">
+              <img src="img/menu/carne_asada.png" alt="Carne asada" />
+              <span class="dish-ph">11</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.11.name">Carne asada</h3>
+                <span class="price">$145</span>
+              </div>
+              <p data-i18n="dish.11.desc">Carne asada con cebolla, guacamole, arroz y frijoles.</p>
+            </div>
+          </article>
+          <!-- 12 -->
+          <article class="dish" data-cat="principal">
+            <div class="dish-media">
+              <img src="img/menu/mole_poblano.png" alt="Mole poblano" />
+              <span class="dish-ph">12</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.12.name">Mole poblano</h3>
+                <span class="price">$120</span>
+              </div>
+              <p data-i18n="dish.12.desc">Pollo bañado en mole poblano tradicional.</p>
+            </div>
+          </article>
+          <!-- 13 -->
+          <article class="dish" data-cat="principal">
+            <div class="dish-media">
+              <img src="img/menu/pozole_rojo.png" alt="Pozole rojo" />
+              <span class="dish-ph">13</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.13.name">Pozole rojo</h3>
+                <span class="price">$95</span>
+              </div>
+              <p data-i18n="dish.13.desc">Pozole rojo con maíz, carne y acompañamientos.</p>
+            </div>
+          </article>
+          <!-- 14 -->
+          <article class="dish" data-cat="principal">
+            <div class="dish-media">
+              <img src="img/menu/guiso_calavasa_pollo.png" alt="Guiso de calabaza con pollo" />
+              <span class="dish-ph">14</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.14.name">Guiso de calabaza con pollo</h3>
+                <span class="price">$90</span>
+              </div>
+              <p data-i18n="dish.14.desc">Guiso casero de calabaza con pollo y especias.</p>
+            </div>
+          </article>
+          <!-- 15 -->
+          <article class="dish" data-cat="postre">
+            <div class="dish-media">
+              <img src="img/menu/empanada_piña.png" alt="Empanada de piña" />
+              <span class="dish-ph">15</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3 data-i18n="dish.15.name">Empanada de piña</h3>
+                <span class="price">$25</span>
+              </div>
+              <p data-i18n="dish.15.desc">Empanada dulce rellena de piña.</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="contacto">
+    <!-- 5. Galería -->
+    <div class="section-divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4 L44 24 L24 44 L4 24 Z" stroke="currentColor" stroke-width="1.4"/><path d="M24 12 L36 24 L24 36 L12 24 Z" stroke="currentColor" stroke-width="1.1" opacity=".7"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+      <span></span>
+    </div>
+    <section class="section section--alt section--ornate" id="galeria">
       <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="contact.eyebrow">Contacto</p>
-          <h2 data-i18n="contact.title">Hablemos de tu próximo proyecto</h2>
-          <div class="ornament ornament-sm" aria-hidden="true">
-            <span class="ornament-line"></span>
-            <span class="ornament-gem"></span>
-            <span class="ornament-line"></span>
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="gallery.eyebrow">Ambiente</p>
+          <h2 data-i18n="gallery.title">Galería fotográfica</h2>
+          <div class="ornament" aria-hidden="true">
+            <svg viewBox="0 0 200 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18h42M152 18h42" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M48 18h16M136 18h16" stroke="currentColor" stroke-width="1" opacity=".5" stroke-dasharray="2 3"/>
+              <path d="M70 18c10-12 20-12 30 0 10 12 20 12 30 0" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M76 18c7 9 14 9 21 0 7-9 14-9 21 0" stroke="currentColor" stroke-width="1.15" opacity=".75"/>
+              <path d="M100 6 L110 18 L100 30 L90 18 Z" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="100" cy="18" r="2.5" fill="currentColor"/>
+              <path d="M84 10l4 8-4 8M116 10l-4 8 4 8" stroke="currentColor" stroke-width="1.15"/>
+              <path d="M58 14l4 4-4 4M142 14l-4 4 4 4" stroke="currentColor" stroke-width="1" opacity=".8"/>
+            </svg>
           </div>
-          <p class="section-lead" data-i18n="contact.lead">Completa el formulario o escríbeme directamente.</p>
-        </header>
+          <p class="section-lead" data-i18n="gallery.lead">Momentos del fogón, la mesa y la noche.</p>
+        </div>
+        <div class="gallery-grid reveal">
+          <figure class="gallery-item"><img src="img/galeria/01.jpg" alt="" onerror="this.style.display='none'" /><span>01</span></figure>
+          <figure class="gallery-item gallery-item--tall"><img src="img/galeria/02.jpg" alt="" onerror="this.style.display='none'" /><span>02</span></figure>
+          <figure class="gallery-item"><img src="img/galeria/03.jpg" alt="" onerror="this.style.display='none'" /><span>03</span></figure>
+          <figure class="gallery-item"><img src="img/galeria/04.jpg" alt="" onerror="this.style.display='none'" /><span>04</span></figure>
+          <figure class="gallery-item gallery-item--wide"><img src="img/galeria/05.jpg" alt="" onerror="this.style.display='none'" /><span>05</span></figure>
+          <figure class="gallery-item"><img src="img/galeria/06.jpg" alt="" onerror="this.style.display='none'" /><span>06</span></figure>
+        </div>
+      </div>
+    </section>
 
-        <div class="contact-layout">
-          <div class="contact-info">
-            <ul class="contact-details">
-              <li>
-                <span data-i18n="contact.emailLabel">Correo</span>
-                <a href="mailto:angeljavier.briseno@gmail.com">angeljavier.briseno@gmail.com</a>
-              </li>
-              <li>
-                <span data-i18n="contact.phoneLabel">Teléfono</span>
-                <a href="tel:+528621280239">+52 862 128 0239</a>
-              </li>
-              <li>
-                <span data-i18n="contact.addressLabel">Ubicación</span>
-                <address data-i18n="contact.address">Isidro Flores #106, Col. Presidentes, Allende, Coahuila, México</address>
-              </li>
-            </ul>
+    <!-- 6. Promociones -->
+    <div class="section-divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4 L44 24 L24 44 L4 24 Z" stroke="currentColor" stroke-width="1.4"/><path d="M24 12 L36 24 L24 36 L12 24 Z" stroke="currentColor" stroke-width="1.1" opacity=".7"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+      <span></span>
+    </div>
+    <section class="section section--ornate" id="promociones">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="promos.eyebrow">Especiales</p>
+          <h2 data-i18n="promos.title">Promociones</h2>
+          <div class="ornament" aria-hidden="true">
+            <svg viewBox="0 0 200 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18h42M152 18h42" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M48 18h16M136 18h16" stroke="currentColor" stroke-width="1" opacity=".5" stroke-dasharray="2 3"/>
+              <path d="M70 18c10-12 20-12 30 0 10 12 20 12 30 0" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M76 18c7 9 14 9 21 0 7-9 14-9 21 0" stroke="currentColor" stroke-width="1.15" opacity=".75"/>
+              <path d="M100 6 L110 18 L100 30 L90 18 Z" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="100" cy="18" r="2.5" fill="currentColor"/>
+              <path d="M84 10l4 8-4 8M116 10l-4 8 4 8" stroke="currentColor" stroke-width="1.15"/>
+              <path d="M58 14l4 4-4 4M142 14l-4 4 4 4" stroke="currentColor" stroke-width="1" opacity=".8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="promo-list">
+          <article class="promo reveal">
+            <p class="promo-day" data-i18n="promos.1.day">Martes</p>
+            <h3 data-i18n="promos.1.title">Noche de parrillada</h3>
+            <p data-i18n="promos.1.text">20% de descuento en la Parrillada Casa Brasa para dos.</p>
+          </article>
+          <article class="promo reveal">
+            <p class="promo-day" data-i18n="promos.2.day">Jueves</p>
+            <h3 data-i18n="promos.2.title">2×1 en entradas</h3>
+            <p data-i18n="promos.2.text">Lleva dos entradas al precio de una después de las 6:00 p.m.</p>
+          </article>
+          <article class="promo reveal">
+            <p class="promo-day" data-i18n="promos.3.day">Domingo</p>
+            <h3 data-i18n="promos.3.title">Menú familiar</h3>
+            <p data-i18n="promos.3.text">Menú completo para 4 personas a precio especial.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <div class="social">
-              <p class="social-label" data-i18n="contact.social">Redes sociales</p>
-              <ul class="social-list">
-                <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+    <!-- 7–8. Ubicación + Horarios -->
+    <div class="section-divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4 L44 24 L24 44 L4 24 Z" stroke="currentColor" stroke-width="1.4"/><path d="M24 12 L36 24 L24 36 L12 24 Z" stroke="currentColor" stroke-width="1.1" opacity=".7"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+      <span></span>
+    </div>
+    <section class="section section--alt section--ornate" id="ubicacion">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="location.eyebrow">Visítanos</p>
+          <h2 data-i18n="location.title">Ubicación y horarios</h2>
+          <div class="ornament" aria-hidden="true">
+            <svg viewBox="0 0 200 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18h42M152 18h42" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M48 18h16M136 18h16" stroke="currentColor" stroke-width="1" opacity=".5" stroke-dasharray="2 3"/>
+              <path d="M70 18c10-12 20-12 30 0 10 12 20 12 30 0" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M76 18c7 9 14 9 21 0 7-9 14-9 21 0" stroke="currentColor" stroke-width="1.15" opacity=".75"/>
+              <path d="M100 6 L110 18 L100 30 L90 18 Z" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="100" cy="18" r="2.5" fill="currentColor"/>
+              <path d="M84 10l4 8-4 8M116 10l-4 8 4 8" stroke="currentColor" stroke-width="1.15"/>
+              <path d="M58 14l4 4-4 4M142 14l-4 4 4 4" stroke="currentColor" stroke-width="1" opacity=".8"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="visit-grid">
+          <div class="visit-info reveal">
+            <div class="info-block">
+              <h3 data-i18n="location.addressTitle">Dirección</h3>
+              <p data-i18n="location.address">Av. Reforma 245, Col. Centro<br />Ciudad de México, CDMX 06000</p>
+            </div>
+            <div class="info-block" id="horarios">
+              <h3 data-i18n="hours.title">Horarios de atención</h3>
+              <ul class="hours-list">
+                <li><span data-i18n="hours.week">Lun – Jue</span><span>13:00 – 22:00</span></li>
+                <li><span data-i18n="hours.fri">Vie – Sáb</span><span>13:00 – 23:30</span></li>
+                <li><span data-i18n="hours.sun">Domingo</span><span>13:00 – 21:00</span></li>
               </ul>
             </div>
+            <!-- 9. Contacto info -->
+            <div class="info-block" id="info-contacto">
+              <h3 data-i18n="contact.infoTitle">Información de contacto</h3>
+              <p>
+                <a href="tel:+525555551234">+52 55 5555 1234</a><br />
+                <a href="mailto:hola@casabrasa.mx">hola@casabrasa.mx</a>
+              </p>
+            </div>
           </div>
 
-          <form class="contact-form" id="contact-form" novalidate>
-            <div class="field">
-              <label for="name" data-i18n="form.name">Nombre</label>
-              <input type="text" id="name" name="name" autocomplete="name" required />
-            </div>
-            <div class="field">
-              <label for="email" data-i18n="form.email">Correo electrónico</label>
-              <input type="email" id="email" name="email" autocomplete="email" required />
-            </div>
-            <div class="field">
-              <label for="subject" data-i18n="form.subject">Asunto</label>
-              <input type="text" id="subject" name="subject" required />
-            </div>
-            <div class="field">
-              <label for="message" data-i18n="form.message">Mensaje</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" data-i18n="form.submit">Enviar mensaje</button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
-          </form>
+          <!-- 12. Google Maps -->
+          <div class="map-wrap reveal">
+            <iframe
+              title="Google Maps — Casa Brasa"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3512.0756422016852!2d-100.86570832471098!3d28.32631247583341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86f54c215b7ddd55%3A0x2e4e82dc60faf34a!2sIsidro%20Flores%20106%2C%20Presidentes%2C%2026553%20Allende%2C%20Coah.!5e0!3m2!1ses-419!2smx!4v1786634101094!5m2!1ses-419!2smx"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Formulario de contacto -->
+    <div class="section-divider" aria-hidden="true">
+      <span></span>
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4 L44 24 L24 44 L4 24 Z" stroke="currentColor" stroke-width="1.4"/><path d="M24 12 L36 24 L24 36 L12 24 Z" stroke="currentColor" stroke-width="1.1" opacity=".7"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
+      <span></span>
+    </div>
+    <section class="section section--ornate" id="contacto">
+      <div class="container narrow">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Escríbenos</p>
+          <h2 data-i18n="contact.title">Formulario de contacto</h2>
+          <div class="ornament" aria-hidden="true">
+            <svg viewBox="0 0 200 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18h42M152 18h42" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M48 18h16M136 18h16" stroke="currentColor" stroke-width="1" opacity=".5" stroke-dasharray="2 3"/>
+              <path d="M70 18c10-12 20-12 30 0 10 12 20 12 30 0" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M76 18c7 9 14 9 21 0 7-9 14-9 21 0" stroke="currentColor" stroke-width="1.15" opacity=".75"/>
+              <path d="M100 6 L110 18 L100 30 L90 18 Z" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="100" cy="18" r="2.5" fill="currentColor"/>
+              <path d="M84 10l4 8-4 8M116 10l-4 8 4 8" stroke="currentColor" stroke-width="1.15"/>
+              <path d="M58 14l4 4-4 4M142 14l-4 4 4 4" stroke="currentColor" stroke-width="1" opacity=".8"/>
+            </svg>
+          </div>
+          <p class="section-lead" data-i18n="contact.lead">Reservas, eventos o comentarios. Te respondemos pronto.</p>
         </div>
 
-        <div class="map-wrap">
-          <h3 class="map-title" data-i18n="contact.mapTitle">Ubicación</h3>
-          <iframe
-            title="Google Maps — Allende, Coahuila"
-            data-i18n-title="contact.mapIframe"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3512.0756422016852!2d-100.86570832471098!3d28.32631247583341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86f54c215b7ddd55%3A0x2e4e82dc60faf34a!2sIsidro%20Flores%20106%2C%20Presidentes%2C%2026553%20Allende%2C%20Coah.!5e0!3m2!1ses-419!2smx!4v1786634101094!5m2!1ses-419!2smx"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-          ></iframe>
-        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-row">
+            <label>
+              <span data-i18n="contact.name">Nombre</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              <span data-i18n="contact.email">Correo</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+          </div>
+          <label>
+            <span data-i18n="contact.phone">Teléfono</span>
+            <input type="tel" name="phone" autocomplete="tel" />
+          </label>
+          <label>
+            <span data-i18n="contact.subject">Asunto</span>
+            <select name="subject" required>
+              <option value="" data-i18n="contact.subjectPlaceholder">Selecciona una opción</option>
+              <option value="reserva" data-i18n="contact.optReserve">Reserva</option>
+              <option value="evento" data-i18n="contact.optEvent">Evento privado</option>
+              <option value="otro" data-i18n="contact.optOther">Otro</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="contact.message">Mensaje</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary" data-i18n="contact.submit">Enviar mensaje</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo-text" data-i18n="brand">Tu Nombre</span>
-        <p data-i18n="footer.tagline">Portafolio personal · Desarrollador Frontend</p>
+  <!-- Modal de producto -->
+  <div class="modal" id="dish-modal" hidden aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div
+      class="modal__dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-dish-name"
+      tabindex="-1"
+    >
+      <button type="button" class="modal__close" data-close-modal aria-label="Cerrar">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="modal__layout">
+        <div class="modal__media">
+          <img id="modal-dish-img" src="" alt="" />
+        </div>
+        <div class="modal__info">
+          <p class="modal__eyebrow" id="modal-dish-cat"></p>
+          <h3 id="modal-dish-name"></h3>
+          <div class="ornament ornament--modal" aria-hidden="true">
+            <svg viewBox="0 0 200 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18h42M152 18h42" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M70 18c10-12 20-12 30 0 10 12 20 12 30 0" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M100 6 L110 18 L100 30 L90 18 Z" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="100" cy="18" r="2.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <p class="modal__desc" id="modal-dish-desc"></p>
+          <p class="modal__price" id="modal-dish-price"></p>
+          <a class="btn btn--primary modal__cta" href="#contacto" data-close-modal data-i18n="modal.cta">Reservar mesa</a>
+        </div>
       </div>
-      <nav class="footer-nav" aria-label="Pie">
-        <a href="#inicio" data-i18n="nav.home">Inicio</a>
-        <a href="#acerca" data-i18n="nav.about">Acerca de mí</a>
-        <a href="#portafolio" data-i18n="nav.portfolio">Portafolio</a>
-        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
-      </nav>
-      <p class="footer-copy">
-        <span>&copy; <span id="year"></span></span>
-        <span data-i18n="footer.rights">Todos los derechos reservados.</span>
-      </p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="knot-strip" aria-hidden="true"></div>
+    <div class="footer-runes" aria-hidden="true">ᚠ · ᚱ · ᚨ · ᛊ · ᚨ</div>
+    <div class="container footer-inner">
+      <a class="logo" href="#inicio"><span class="logo-mark" aria-hidden="true">ᚠ</span> Casa Brasa</a>
+      <p data-i18n="footer.copy">© 2026 Casa Brasa. Todos los derechos reservados.</p>
+      <a class="to-top" href="#top" data-i18n="footer.top">Volver arriba</a>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
