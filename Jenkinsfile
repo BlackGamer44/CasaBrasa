@@ -3,13 +3,11 @@ pipeline {
 
     environment {
         PROJECT_NAME = "Restaurante CasaBrasa"
-        // Ruta de tu servidor local en XAMPP (cámbiala si tu disco o ruta es diferente)
         DEPLOY_DIR   = "C:/xampp/htdocs/casabrasa" 
     }
 
     options {
         timeout(time: 15, unit: 'MINUTES')
-        ansiColor('xterm')
         buildDiscarder(logRotator(numToKeepStr: '10'))
         timestamps()
     }
@@ -65,7 +63,6 @@ pipeline {
         stage('5. Archivado de Artefactos') {
             steps {
                 echo "--> Empaquetando artefactos de la aplicación web..."
-                // Guarda una copia de los archivos web en el historial de Jenkins
                 archiveArtifacts artifacts: '**/*.html, **/*.css, **/*.js, **/*.png, **/*.jpg', allowEmptyArchive: true
             }
         }
@@ -73,7 +70,6 @@ pipeline {
         stage('6. Despliegue Automático (Deploy)') {
             steps {
                 echo "--> Desplegando el sitio web hacia el servidor de producción (XAMPP)..."
-                // Crea la carpeta de destino si no existe y copia todos los archivos web del repositorio
                 bat '''
                     @echo off
                     if not exist "%DEPLOY_DIR%" mkdir "%DEPLOY_DIR%"
